@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="kvadratUr.KvadratUr" id="KU">
+
+        <property name="a" value="1"/>
+
+        <property name="b" value="-8"/>
+
+        <property name="c" value="16"/>
+
+        <property name="plus" ref="CalcP"/>
+        <property name="minus" ref="CalcM"/>
+        <property name="umnogenie" ref="CalcU"/>
+        <property name="delenie" ref="CalcD"/>
+        <property name="koren" ref="CalcK"/>
+    </bean>
+
+    <bean class="calc.CalcPlus" id= "CalcP"/>
+    <bean class="calc.CalcKoren" id= "CalcK"/>
+    <bean class="calc.CalcMinus" id= "CalcM"/>
+    <bean class="calc.CalcUmnogenie" id= "CalcU"/>
+    <bean class="calc.CalcDelenie" id= "CalcD"/>
+
+    <bean class="java.lang.Math" id="sqrt"/>
+
+</beans>
